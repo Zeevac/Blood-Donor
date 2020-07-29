@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="140dp">
+
+   <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.7">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+        
+            <ImageView
+                android:id="@+id/bloodGroupImageView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/a_negative"/>
+
+            <TextView
+                android:id="@+id/donorNameTextView"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Uchenna Nnodim"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/bloodGroupImageView"/>
+
+            <TextView
+                android:id="@+id/donorLocationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delaware, USA"
+                android:layout_toRightOf="@+id/bloodGroupImageView"
+                android:layout_below="@+id/donorNameTextView"
+                android:layout_marginLeft="10dp"/>
+			<LinearLayout
+				android:id="@+id/mapLayout"
+				android:clickable="true"
+				android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:layout_alignParentRight="true">
+				<ImageView
+					android:id="@+id/mapImageView"
+					android:src="@drawable/location"
+					android:layout_width="50dp"
+					android:layout_height="50dp"/>
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Show on map"
+					android:textColor="@android:color/black"
+					android:textSize="12sp"/>
+			</LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_alignParentBottom="true"
+            android:background="#e2e2e2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="0dp"
+        android:layout_weight="0.3">
+
+        <!-- Call Layout -->
+
+        <RelativeLayout
+            android:id="@+id/callLayout"
+            android:clickable="true"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.34">
+
+             <ImageView
+                android:layout_toLeftOf="@+id/emailText"
+                android:src="@drawable/phone"
+                android:layout_width="18dp"
+                android:layout_height="18dp"/>
+
+             <TextView
+                android:id="@+id/emailText"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Call"
+                android:layout_marginLeft="5dp"/>
+
+        </RelativeLayout>
+        
+
+         <!-- Email Layout -->
+
+        <RelativeLayout
+            android:id="@+id/emailLayout"
+            android:clickable="true"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.34">
+
+             <ImageView
+                android:layout_toLeftOf="@+id/emailText"
+                android:src="@drawable/mail"
+                android:layout_width="18dp"
+                android:layout_height="18dp"/>
+
+             <TextView
+                android:id="@+id/emailText"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mail"
+                android:layout_marginLeft="5dp"/>
+
+        </RelativeLayout>
+        
+
+         <!-- Delete Layout -->
+
+        <RelativeLayout
+            android:id="@+id/deleteLayout"
+            android:clickable="true"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33">
+
+             <ImageView
+                android:layout_toLeftOf="@+id/emailText"
+                android:src="@drawable/delete"
+                android:layout_width="18dp"
+                android:layout_height="18dp"/>
+
+             <TextView
+                android:id="@+id/emailText"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:layout_marginLeft="5dp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+	<View
+            android:layout_alignParentBottom="true"
+            android:background="#e2e2e2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+</LinearLayout>
